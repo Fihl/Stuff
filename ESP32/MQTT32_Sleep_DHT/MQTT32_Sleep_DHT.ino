@@ -18,6 +18,8 @@
 #include "esp_sleep.h"
 RTC_DATA_ATTR int32_t SavtakValue = 0;
 
+// Do copy my initial file into same folder. 
+// Or better into the library folder, for reuse in other projects like WeatherStation in https://github.com/Fihl/LaserCutter2D/tree/main/Src/WeatherStation 
 // Adafruit.io Setup
 #include "PrivateCredentials.h" // AIO_SERVER, AIO_SERVERPORT, AIO_, AIO_USERNAME, AIO_KEY, AIO_FINGERPRINT, adafruitio_root_ca
 
