@@ -69,7 +69,6 @@ static void deep_sleep_task(void *args)
         }
 
 #if CONFIG_EXAMPLE_GPIO_WAKEUP
-asdasdasdasd
         case ESP_SLEEP_WAKEUP_GPIO: {
             uint64_t wakeup_pin_mask = esp_sleep_get_gpio_wakeup_status();
             if (wakeup_pin_mask != 0) {
@@ -83,7 +82,6 @@ asdasdasdasd
 #endif //CONFIG_EXAMPLE_GPIO_WAKEUP
 
 #if CONFIG_EXAMPLE_EXT0_WAKEUP
-asdasdasd
         case ESP_SLEEP_WAKEUP_EXT0: {
             printf("Wake up from ext0\n");
             break;
@@ -91,7 +89,6 @@ asdasdasd
 #endif // CONFIG_EXAMPLE_EXT0_WAKEUP
 
 #ifdef CONFIG_EXAMPLE_EXT1_WAKEUP
-asdasdasdad
         case ESP_SLEEP_WAKEUP_EXT1: {
             uint64_t wakeup_pin_mask = esp_sleep_get_ext1_wakeup_status();
             if (wakeup_pin_mask != 0) {
@@ -105,7 +102,6 @@ asdasdasdad
 #endif // CONFIG_EXAMPLE_EXT1_WAKEUP
 
 #ifdef CONFIG_EXAMPLE_TOUCH_WAKEUP
-asdasda
         case ESP_SLEEP_WAKEUP_TOUCHPAD: {
             printf("Wake up from touch on pad %d\n", esp_sleep_get_touchpad_wakeup_status());
             break;
@@ -137,7 +133,13 @@ asdasda
     ESP_ERROR_CHECK(nvs_commit(nvs_handle));
     nvs_close(nvs_handle);
 #endif
-
+    
+    //https://m1cr0lab-esp32.github.io/sleep-modes/hibernation-mode/
+    esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_PERIPH,   ESP_PD_OPTION_OFF);
+    esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_SLOW_MEM, ESP_PD_OPTION_OFF);
+    esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_FAST_MEM, ESP_PD_OPTION_OFF);
+    esp_sleep_pd_config(ESP_PD_DOMAIN_XTAL,         ESP_PD_OPTION_OFF);
+    
     // enter deep sleep
     esp_deep_sleep_start();
 }
