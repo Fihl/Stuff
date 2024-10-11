@@ -1,17 +1,8 @@
-#ifndef PRIVATECREDENTIAL
-#define PRIVATECREDENTIAL
+#pragma once
 
 ÆNDRE WIFI indstillinger i denne fil, og udkommenter denne linje
 #define WLAN_SSID       "minWifi"
 #define WLAN_PASS       "mitWifiPW"
-
-// Sign up here to get an API key:
-// https://docs.thingpulse.com/how-tos/openweathermap-key/
-ÆNDRE thingpulse indstillinger i denne fil, og udkommenter denne linje
-#define OPEN_WEATHER_MAP_APP_ID "XXXXXXXXXXXX"
-#define OPEN_WEATHER_MAP_LOCATION_ID "2615730" // 2615730=Ølstykke.  updateForecasts vs updateForecastsById
-// Test in a browser against https://api.openweathermap.org/data/2.5/weather?id=2615730&appid=1f51750fXXXXXXXXXXX&units=metric&lang=en
-// Put in your own API key
 
 ÆNDRE AdaFruit indstillinger i denne fil, og udkommenter denne linje
 #define AIO_SERVER      "io.adafruit.com"
@@ -21,6 +12,16 @@
 //https://io.adafruit.com/ChristenFihl/
 #define AIO_USERNAME  "ChristenFihlXXXXXXXXX"
 #define AIO_KEY       "ed7fbdXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+
+
+// Sign up here to get an API key:
+// https://docs.thingpulse.com/how-tos/openweathermap-key/
+ÆNDRE thingpulse indstillinger i denne fil, og udkommenter denne linje
+#define OPEN_WEATHER_MAP_APP_ID "XXXXXXXXXXXX"
+#define OPEN_WEATHER_MAP_LOCATION_ID "2615730" // 2615730=Ølstykke.  updateForecasts vs updateForecastsById
+// Test in a browser against https://api.openweathermap.org/data/2.5/weather?id=2615730&appid=1f51750fXXXXXXXXXXX&units=metric&lang=en
+// Put in your own API key
 
 // io.adafruit.com root CA
 const char* adafruitio_root_ca = \
@@ -52,4 +53,4 @@ const char* adafruitio_root_ca = \
       "7h4SeM6Y8l/7MBRpPCz6l8Y=\n"
       "-----END CERTIFICATE-----\n";
 
-#endif
+
