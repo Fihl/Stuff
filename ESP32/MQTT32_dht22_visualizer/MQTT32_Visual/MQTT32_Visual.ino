@@ -6,7 +6,8 @@
 
   Test on Lolin C3 Super Mini. SDA/SCL on 8/10 as debug output shows
   [esp32-hal-i2c.c:112] i2cInit(): Initializing I2C Master: sda=8 scl=10 freq=100000
-
+  CPU C3 https://www.aliexpress.com/item/1005006391993583.html 
+  
  **********************************************************************/
 
 #include <WiFi.h>

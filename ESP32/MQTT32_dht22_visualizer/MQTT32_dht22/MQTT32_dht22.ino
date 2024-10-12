@@ -1,6 +1,10 @@
 /***********************************************************************
   
   Using Adafruit MQTT Library on ESP32. Using SSL/TLS
+  https://learn.adafruit.com/mqtt-adafruit-io-and-you/intro-to-adafruit-mqtt
+  https://io.adafruit.com/api/docs/mqtt.html
+
+  CPU C3 https://www.aliexpress.com/item/1005006391993583.html
 
  **********************************************************************/
 
