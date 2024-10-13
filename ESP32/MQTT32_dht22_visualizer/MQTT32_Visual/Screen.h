@@ -12,6 +12,7 @@ Adafruit_SSD1306 display(128, 32, &Wire, -1);
 
 void scrTextSetup()
 {
+  //Wire.begin(8,10);  //8,10 is default for C3 Super Mini
   if (!display.begin(SSD1306_SWITCHCAPVCC, SSDport) ) { // Address 0x3C for 128x32, 0x3D for 128x64
     Serial.println(F("SSD1306 allocation failed"));
     while(1);
