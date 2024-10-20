@@ -28,9 +28,9 @@ void keyReleased() {
   if (mod & RightCtrl) {
     doPrintInfo = true;
     byte newval=0;
-    if (key==39) newval=30;           //'0' => 30
     if (key==53) newval=6;            //'1/2' => 6
-    else newval = 2*(key-30) + 10;    //'1'..'9' => 2*(0..10) + 10 => 10..28
+    else if (key==39) newval=30;      //'0' => 30
+    else newval = 2*(key-30) + 10;    //'1'..'9' => 2*(0..8) + 10 => 10..26
     if (newval>=6 & newval<=30)
       curSpeed = newval;
     speed_ms = 1200 / curSpeed;
